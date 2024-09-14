@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+
+:root {
+    --font-color: #1a1a1a;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+
+    list-style: none;
+    text-decoration: none;
+    color: var(--font-color);
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100vw;
+    height: 52px;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid var(--font-color);
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.title {
+    height: 100%;
+    padding-left: 10%;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav > a > li {
+    width: 80px;
+    font-weight: 400;
+    padding: 5px 10px;
+    box-shadow: 0 1px 1px var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > a > li:hover {
+    box-shadow: none;
+}
+
+.selected {
+    box-shadow: none;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 52px;
+}
+
+.top-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.top-image-container::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    background-image: url("./image-assets/desks.jpg");
+    filter: blur(6px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 24%;
+    font-size: 4.6rem;
+}
+
+.sub-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 46%;
+    font-size: 3.2rem;
+    margin: 2em 0;
+}
+
+.use-btn {
+    width: 220px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: white;
+
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--font-color);
+    margin: auto;
+}
+
+.use-btn:hover {
+    opacity: 0.6;
+}
+
+.top-btn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+
+.contents-container {
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    padding-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contents {
+    height: 100%;
+    width: calc(100% / 3.5);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--font-color);
+
+    display: flex;
+    flex-flow: column;
+}
+
+.image {
+    width: 100%;
+    height: 50%;
+    background-size: inherit;
+    background: no-repeat center;
+}
+
+#about .contents:nth-of-type(1) > .image {
+    background-image: url("./image-assets/Ransom note letters-pana.svg");
+}
+
+#about .contents:nth-of-type(2) > .image {
+    background-image: url("./image-assets/Control\ Panel-rafiki.svg");
+}
+
+#about .contents:nth-of-type(3) > .image {
+    background-image: url("./image-assets/Transfer files-cuate.svg");
+}
+
+#usage .contents:nth-of-type(1) > .image {
+    background-image: url("./image-assets/Setup Wizard-pana.svg");
+}
+
+#usage .contents:nth-of-type(2) > .image {
+    background-image: url("./image-assets/Click\ here-rafiki.svg");
+}
+
+#usage .contents:nth-of-type(3) > .image {
+    background-image: url("./image-assets/Moving forward-cuate.svg");
+}
+
+.contents-title {
+    font-size: 1.4rem;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff725e;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.description {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 45%;
+    border: 2px solid #ff725e;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.contents:nth-of-type(2) > .contents-title {
+    background-color: #407bff;
+}
+
+.contents:nth-of-type(2) > .description {
+    border-color: #407bff;
+}
+
+.contents:nth-of-type(3) > .contents-title {
+    background-color: #ffc727;
+}
+
+.contents:nth-of-type(3) > .description {
+    border-color: #ffc727;
+}
+
+
+#usage .image {
+    font-size: 4.2em;
+    font-family: serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desk-data {
+    width: 100%;
+    padding-left: 10%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+}
+
+.desk-count-container {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6em;
+}
+
+input[type="number"] {
+    height: auto;
+    font-size: inherit;
+    text-align: center;
+}
+
+.random-btn {
+    width: 120px;
+    height: 30px;
+    font-size: .75em;
+    transition: .3s;
+    border: 1px solid var(--font-color);
+    background-color: white;
+    cursor: pointer;
+}
+
+.random-btn:hover {
+    border-radius: 30px;
+}
+
+.desk-container {
+    width: 100%;
+    height: 90%;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(100% / 4 / 8);
+    overflow: hidden;
+}
+
+.desk {
+    width: calc(100% / 4.5);
+    height: calc(100% / 4.5);
+    border-radius: 6px;
+    border: 3px solid #a1320a;
+    background-color: #ffbe75;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desk-name {
+    width: 90%;
+    height: 64%;
+    font-size: 5vh;
+    border: none;
+    text-align: center;
+}
+
+.desk-name::placeholder {
+    font-size: 0.32em;
+}
+
+
+
+table {
+    margin-top: 10%;
+    width: 80%;
+    min-width: 480px;
+    margin-inline: auto;
+    padding: 20px;
+    border-collapse: collapse;
+    border: 1px solid var(--font-color);
+}
+
+tr {
+    height: 40px;
+    border-bottom: 1px solid var(--font-color);
+}
+
+th, td {
+    text-align: start;
+    padding-left: 10px;
+}
+
+tr:first-of-type {
+    background-color: lightgray;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>席替え</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="title">席替え</div>
+
+            <nav>
+                <a href="#top">
+                    <li class="selected">TOP</li>
+                </a>
+                <a href="#about">
+                    <li>ABOUT</li>
+                </a>
+                <a href="#usage">
+                    <li>USAGE</li>
+                </a>
+                <a href="#machine">
+                    <li>MACHINE</li>
+                </a>
+                <a href="#setting">
+                    <li>SETTING</li>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="top">
+        <div class="top-image-container">
+            <div class="main-title">プログラミングの活用による生活</div>
+            <div class="sub-title">「席替え」</div>
+            <a href="#machine" class="use-btn top-btn">使ってみる</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="contents-container">
+            <div class="contents" data-aos="fade-up" data-aos-delay="400">
+                <div class="image"></div>
+                <div class="contents-title">ランダム配置</div>
+                <div class="description">アルゴリズムによる<br>公平で偏りのない<br>席の割り当て</div>
+            </div>
+            <div class="contents" data-aos="fade-up" data-aos-delay="600">
+                <div class="image"></div>
+                <div class="contents-title">カスタマイズ機能</div>
+                <div class="description">席の数を<br>自由に調整可能</div>
+            </div>
+            <div class="contents" data-aos="fade-up" data-aos-delay="800">
+                <div class="image"></div>
+                <div class="contents-title">席順の保存</div>
+                <div class="description">生成した席の割り当てを<br>ローカルストレージに安全に保存</div>
+            </div>
+        </div>
+        <a href="#machine" class="use-btn">使ってみる</a>
+    </section>
+
+    <section id="usage">
+        <div class="contents-container">
+            <div class="contents" data-aos="fade-right" data-aos-delay="400">
+                <div class="image"></div>
+                <div class="contents-title">机を準備</div>
+                <div class="description">机の数を設定して、それぞれの机に名前を入力しよう</div>
+            </div>
+            <div class="contents" data-aos="fade-down" data-aos-delay="800">
+                <div class="image"></div>
+                <div class="contents-title">ボタンをクリック</div>
+                <div class="description">「席替えをする」ボタンを押して、ランダムな席替えをしよう</div>
+            </div>
+            <div class="contents" data-aos="fade-up" data-aos-delay="1200">
+                <div class="image"></div>
+                <div class="contents-title">席を移動する</div>
+                <div class="description">生成された、席の割り当てを元に席を移動しよう</div>
+            </div>
+        </div>
+        <a href="#machine" class="use-btn">使ってみる</a>
+    </section>
+
+    <section id="machine">
+        <div class="desk-data">
+            <p class="desk-count">机の数：</p>
+            <div class="desk-count-container">
+                <input type="number" name="" id="desk-count" min="12" max="24" step="12" value="12">
+            </div>
+            <div style="width: 10%;"></div>
+            <button class="random-btn" id="random-btn">席替えをする</button>
+        </div>
+        <div class="desk-container"></div>
+    </section>
+
+    <section id="setting">
+        <table>
+            <tr>
+                <th>設定</th>
+                <th>詳細</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <th>データのエクスポート</th>
+                <td>席順のデータをダウンロードする</td>
+                <td><button class="setting-btn" id="btn-download">Download</button></td>
+            </tr>
+            <tr>
+                <th>データのインポート</th>
+                <td>席順のデータを参照して読み込む</td>
+                <td>
+                    <input type="file" name="" id="file-import" accept=".json" style="display: none;">
+                    <button class="setting-btn" id="btn-import">Import</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
