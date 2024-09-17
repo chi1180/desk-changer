@@ -122,6 +122,8 @@ function setDesk() {
         deskName.autocomplete = "off";
         deskName.placeholder = "ここに名前を入力";
         desk.addEventListener("change", () => saveData());
+        desk.addEventListener("input", () => saveData());
+        desk.addEventListener("keydown", () => saveData());
 
         if (room.length > 0) deskName.value = room[i + 1];
 
